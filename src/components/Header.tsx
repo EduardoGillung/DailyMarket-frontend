@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import MobileNav from "./MobileNav";
 import MainNav from "./MainNav";
 
+
 const Header = () => {
     return(
         <div className="border-b-2 border-b-dailyTertiary py-6">
@@ -9,7 +10,7 @@ const Header = () => {
                 <Link
                     to="/"
                     className="text-3xl font-bold tracking-tight text-dailyPrimary font-slab">
-                    Daily Market.com
+                    DailyMarket
                 </Link>
                 <div className="md:hidden">
                     <MobileNav />

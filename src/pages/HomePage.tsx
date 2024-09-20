@@ -6,7 +6,7 @@ const HomePage = () => {
    <div className="flex flex-col gap-12">
         <div className="bg-white rounded-lg shadow-md py-8 flex flex-col gap-5 text-center -mt-16">
             <h1 className="text-5xl font-bold tracking-tight text-dailySecondary font-slab">
-                Procure o produto que deseja aqui
+                Fazer suas compras ficou ainda mais fácil
             </h1>
             <span className="font-semi-bold text-xl font-slab text-CustomGrey"> Tudo o que você precisa em um clique!</span> 
         </div>  
@@ -17,7 +17,7 @@ const HomePage = () => {
                     Faça seus pedidos de qualquer lugar!
                 </span>
                 <span className=" text-CustomGrey font-slab text-xl">
-                    Instale o DailyMarket no seu celular e faça pedidos ainda mais rápido ainda!
+                    Instale o DailyMarket no seu celular e faça pedidos ainda mais rápido!
                 </span>
                 <img src={appDownload} />
             </div>

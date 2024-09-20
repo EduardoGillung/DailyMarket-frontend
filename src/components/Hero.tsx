@@ -5,7 +5,7 @@ const Hero = () => {
         <div>
             <img 
                 src={hero} 
-                className="w-full max-h-[700px] object-cover" />
+                className="w-full max-h-[900px] object-cover" />
         </div>
     );
 };
