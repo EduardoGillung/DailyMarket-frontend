@@ -9,11 +9,10 @@ type CreateUserRequest = {
 };
 
 export const useCreateMyUser = () => {
-    const { getAcessTokenSilently } = useAuth0();
-
-
+    const { getAccessTokenSilently } = useAuth0();
+    //Make the pull request of the user to the backend
     const createMyUserRequest = async (user: CreateUserRequest) => {
-        const acessToken = await getAcessTokenSilently();
+        const acessToken = await getAccessTokenSilently();
         const response = await fetch(`${API_BASE_URL}/api/my/user`, {
             method: "POST",
             headers: {
