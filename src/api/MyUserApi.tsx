@@ -10,13 +10,14 @@ type CreateUserRequest = {
 
 export const useCreateMyUser = () => {
     const { getAccessTokenSilently } = useAuth0();
-    //Make the pull request of the user to the backend
+    //Make the request of the user to the backend
     const createMyUserRequest = async (user: CreateUserRequest) => {
-        const acessToken = await getAccessTokenSilently();
+        const accessToken = await getAccessTokenSilently();
+        //console.log("Access Token:", accessToken); 
         const response = await fetch(`${API_BASE_URL}/api/my/user`, {
             method: "POST",
             headers: {
-                Authorization: `Bearer ${acessToken}`,
+                Authorization: `Bearer ${accessToken}`,
                 "Content-Type": "application/json",
             },
             body: JSON.stringify(user),
@@ -26,7 +27,6 @@ export const useCreateMyUser = () => {
             throw new Error("Failed to create user");
         }
     };
-
     const { 
         mutateAsync: createUser,
         isLoading, 
@@ -40,4 +40,47 @@ export const useCreateMyUser = () => {
         isError,
         isSuccess,
     };
+};
+
+type UpdateMyUserRequest = {
+    name: string;
+    addressLine1: string;
+    city: string;
+    country: string;
+};
+
+export const useUpdateMyUser = () => {
+    const { getAccessTokenSilently } = useAuth0();
+
+    const updateMyUserRequest = async (formData: UpdateMyUserRequest) => {
+        const accessToken = await getAccessTokenSilently();
+        const response = await fetch(`${API_BASE_URL}/api/my/user`, {
+            method: "PUT",
+            headers: {
+                Authorization: `Bearer ${accessToken}`,
+                "Content-Type":"application/json",
+            },
+            body: JSON.stringify(formData),
+        });
+
+
+        if(!response.ok){
+            throw new Error("Failed to update user");
+        }
+        
+        return response.json();
+        
+    };
+
+    const { 
+        mutateAsync: updateUser, 
+        isLoading,
+        isSuccess,  
+        isError,
+        error,
+        reset,
+     } = useMutation(updateMyUserRequest);
+
+     return { updateUser, isLoading };
+     
 };
