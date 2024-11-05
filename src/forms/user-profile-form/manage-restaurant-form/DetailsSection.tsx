@@ -66,18 +66,18 @@ const DetailsSection = () => {
             />
             <FormField
                 control={control}
-                name="Estimated delivery price"
-                render= {({ field }) => ( 
+                name="estimatedDeliveryTime"
+                render={({ field }) => (
                 <FormItem className="max-w-[25%]">
                     <FormLabel>Estimated Delivery Time (minutes)</FormLabel>
-                <FormControl>
-                    <Input {...field} className="bg-white" placeholder="30"/>
-                </FormControl>
-                <FormMessage />
+                    <FormControl>
+                    <Input {...field} className="bg-white" placeholder="30" />
+                    </FormControl>
+                    <FormMessage />
                 </FormItem>
-            )}
-            />
-        </div>
+        )}
+      />
+    </div>
     );
 };
 
