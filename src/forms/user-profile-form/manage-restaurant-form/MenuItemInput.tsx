@@ -24,8 +24,8 @@ const MenuItemInput = ({ index, removeMenuItem }: Props) => {
                   <FormControl>
                     <Input 
                       {...field}
-                      placeholder="Cheese Pizza"
-                      className="bg-white"
+                      placeholder=""
+                      className="bg-white rounded-xl gap-2"
                     />
                   </FormControl>
                 </FormItem>
@@ -42,8 +42,8 @@ const MenuItemInput = ({ index, removeMenuItem }: Props) => {
                   <FormControl>
                     <Input 
                       {...field}
-                      placeholder="0"
-                      className="bg-white"
+                      placeholder=""
+                      className="bg-white rounded-xl gap-2"
                     />
                   </FormControl>
                 </FormItem>
@@ -52,7 +52,7 @@ const MenuItemInput = ({ index, removeMenuItem }: Props) => {
             <Button 
               type="button" 
               onClick={removeMenuItem} 
-              className="bg-red-500 max-h-fit"
+              className="bg-red-500 max-h-fit rounded-xl gap-2"
               >
                 Remove
             </Button>

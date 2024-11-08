@@ -32,6 +32,7 @@ const MenuSection = () => {
             />
             <Button 
               type="button"
+              className="rounded-xl gap-2"
               onClick={() => append({ name: "", price: "" })}>
                 Add Menu Item
             </Button>

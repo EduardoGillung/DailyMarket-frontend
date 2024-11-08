@@ -11,11 +11,11 @@ const UsernameMenu = () => {
     
     return(
         <DropdownMenu>
-            <DropdownMenuTrigger className="flex items-center px-3 font-bold hover:bg-dailySecondary">
+            <DropdownMenuTrigger className="flex items-center px-6 w-full h-10 font-bold hover:bg-dailyPrimary text-dailySecondary rounded-xl gap-3">
                 <CircleUserRound className="text-dailySecondary" />
                 {user?.email}
             </DropdownMenuTrigger>
-            <DropdownMenuContent>
+            <DropdownMenuContent className="bg-white shadow-lg rounded-xl p-8 space-y-2">
             <DropdownMenuItem>
                     <Link
                         to="/manage-restaurant"
@@ -34,7 +34,7 @@ const UsernameMenu = () => {
                 <DropdownMenuItem>
                     <Button
                         onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}
-                        className="flex flex-1 font-bold bg-dailySecondary"
+                        className="flex flex-1 font-bold bg-dailyPrimary rounded-xl"
                         >
                         Desconectar-se
                     </Button>

@@ -10,32 +10,33 @@ import ImageSection from "./ImageSection";
 import LoadingButton from "@/components/LoadingButton";
 import { Button } from "@/components/ui/button";
 
-const formSchema = z.object({
+const formSchema = z
+  .object({
     restaurantName: z.string({
-        required_error: "Restaurant name is required"
+      required_error: "restaurant name is required",
     }),
     city: z.string({
-        required_error: "City name is required"
+      required_error: "city is required",
     }),
     country: z.string({
-        required_error: "Country name is required"
+      required_error: "country is required",
     }),
     deliveryPrice: z.coerce.number({
-        required_error: "Restaurant name is required",
-        invalid_type_error: "Must be a valid number",
+      required_error: "delivery price is required",
+      invalid_type_error: "must be a valid number",
     }),
     estimatedDeliveryTime: z.coerce.number({
-        required_error: "Estimated delivery time is required",
-        invalid_type_error: "Must be a valid number",
+      required_error: "estimated delivery time is required",
+      invalid_type_error: "must be a valid number",
     }),
     cuisines: z.array(z.string()).nonempty({
-        message: "Please select at least one item",
+      message: "please select at least one item",
     }),
     menuItems: z.array(
       z.object({
-        name: z.string().min(1, " is required"),
-        price: z.coerce.number().min(1, " is required"),
-    })
+        name: z.string().min(1, "name is required"),
+        price: z.coerce.number().min(1, "price is required"),
+      })
   ),
   imageFile: z.instanceof(File, { message: "Image is required" }),
 });
@@ -59,7 +60,7 @@ const ManageRestaurantForm = ({ onSave, isLoading }: Props) => {
       const onSubmit = (formDataJson: RestaurantFormData) => {
         const formData = new FormData();
 
-        formData.append("restaurant", formDataJson.restaurantName);
+        formData.append("restaurantName", formDataJson.restaurantName);
         formData.append("city", formDataJson.city);
         formData.append("country", formDataJson.country);
 
@@ -102,7 +103,7 @@ const ManageRestaurantForm = ({ onSave, isLoading }: Props) => {
                 <Separator />
                 <MenuSection />
                 <ImageSection />
-                {isLoading ? <LoadingButton/> : <Button type="submit">Submit</Button>}
+                {isLoading ? <LoadingButton/> : <Button type="submit" className="rounded-xl gap-2">Submit</Button>}
             </form>
         </Form>
     );
