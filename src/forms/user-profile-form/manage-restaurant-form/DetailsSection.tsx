@@ -81,4 +81,4 @@ const DetailsSection = () => {
     );
 };
 
-export default DetailsSection;
+export default DetailsSection; 

@@ -1,11 +1,20 @@
-import { useCreateMyRestaurant } from "@/api/MyRestaurantApi";
+import { useCreateMyRestaurant, useGetMyRestaurant, useUpdateMyRestaurant } from "@/api/MyRestaurantApi";
 import ManageRestaurantForm from "@/forms/user-profile-form/manage-restaurant-form/ManageRestaurantForm";
 
 const ManageRestaurantPage = () => {
-    const { createRestaurant, isLoading } = useCreateMyRestaurant();
+    const { createRestaurant, isLoading: isCreateLoading } = useCreateMyRestaurant();
+    const { restaurant } = useGetMyRestaurant();
+    const { updateRestaurant, isLoading: isUpdateLoading } = useUpdateMyRestaurant();
+
+    //checks if restaurant already exists for the user
+    const isEditing = !!restaurant;
 
     return (
-        <ManageRestaurantForm onSave={createRestaurant} isLoading={isLoading} />
+        <ManageRestaurantForm
+            restaurant={restaurant}
+            onSave={isEditing ? updateRestaurant : createRestaurant} 
+            isLoading={isCreateLoading || isUpdateLoading} 
+        />
     );
 };
 
