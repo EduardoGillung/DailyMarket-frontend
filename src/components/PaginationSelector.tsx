@@ -1,4 +1,4 @@
-import { Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationPrevious } from "./ui/pagination";
+import { Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from "./ui/pagination";
 
 type Props = {
     page: number;
@@ -17,14 +17,35 @@ const PaginationSelector = ({ page, pages, onPageChange }: Props) => {
     return (
         <Pagination>
             <PaginationContent>
+                {page !== 1 && (
                 <PaginationItem>
-                    <PaginationPrevious href='#' onClick={() => onPageChange(page - 1)} />
+                    <PaginationPrevious 
+                        href='#' 
+                        onClick={() => onPageChange(page - 1)} 
+                    />
                 </PaginationItem>
+                )}
+                
                 {pageNumbers.map((number)=> (
                     <PaginationItem>
-                        <PaginationLink>{number}</PaginationLink>
+                        <PaginationLink 
+                            href="#" 
+                            onClick={() => onPageChange(number)} 
+                            isActive={page === number}
+                        >
+                            {number}
+                        </PaginationLink>
                     </PaginationItem>
                 ))}
+                {/* pageNumbers = [1, 2, 3]
+                    page = 3
+                    checks if the page is equals to 3
+                */}
+                {page !== pageNumbers.length && (
+                    <PaginationItem>
+                        <PaginationNext href="#" onClick={() => onPageChange(page + 1)} />
+                    </PaginationItem>
+                )}
             </PaginationContent>
         </Pagination>
     );

@@ -15,7 +15,7 @@ const SearchResultInfo = ({ total, city }: Props) => {
                     Chance location
                 </Link>
             </span> 
-            insert sort dropdown here       
+                 
         </div>
     )
 }
