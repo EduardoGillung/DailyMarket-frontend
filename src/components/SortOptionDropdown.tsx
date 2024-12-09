@@ -3,7 +3,7 @@ import { Button } from "./ui/button";
 
 type Props = {
     onChange: (value: string) => void;
-    sortOptions: string;
+    sortOption: string;
 };
 
 const SORT_OPTIONS = [
@@ -20,12 +20,17 @@ const SORT_OPTIONS = [
         value: "estimatedDeliveryTime",
     },
 ]
-const SortOptionsDropdown = ({ onChange, sortOptions }: Props) => {
+const SortOptionDropdown = ({ onChange, sortOption }: Props) => {
+
+    const selectedSortLabel = 
+        SORT_OPTIONS.find((option) => option.value === sortOption)?.label ||
+        SORT_OPTIONS[0].label;
+
     return (
         <DropdownMenu>
             <DropdownMenuTrigger className="cursor-pointer">
-                <Button variant="outline" className="w-full">
-                    Sort by: {sortOptions}
+                <Button className="w-full">
+                    Sort by: {selectedSortLabel}
                 </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent>
@@ -42,4 +47,4 @@ const SortOptionsDropdown = ({ onChange, sortOptions }: Props) => {
     )
 };
 
-export default SortOptionsDropdown;
+export default SortOptionDropdown;
