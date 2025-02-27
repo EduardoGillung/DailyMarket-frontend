@@ -6,21 +6,24 @@ import { Link } from "react-router-dom";
 const MainNav = () => {
     const { loginWithRedirect, isAuthenticated } = useAuth0();
     return(
-        <span className="flex space-x-2 items-center">
+        <span className="flex space-x-5 items-center">
             {isAuthenticated ? (
             <>
-                <Link to="/order-status" className="font-bold hover:text-dailySecondary">
-                    Order Status
+                <Link 
+                to="/order-status" 
+                className="font-redHat font-bold hover:bg-dailyPrimary text-dailyPrimary "
+                >
+                    Acompanhar pedidos
                 </Link>    
                 <UsernameMenu/>
             </>
             ) : (
                 <Button 
                     variant="ghost" 
-                    className="font-bold hover:text-dailyPrimary hover:bg-white text-dailySecondary"
+                    className="font-redHat font-bold hover:bg-dailyPrimary text-dailyPrimary "
                     onClick={async () => await loginWithRedirect()}
                 >
-                Conectar-se
+                Conectar conta
                 </Button>
         )}
     </span>   

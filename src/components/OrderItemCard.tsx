@@ -50,13 +50,13 @@ const OrderItemCard = ({ order }: Props) => {
       <CardHeader>
         <CardTitle className="grid md:grid-cols-4 gap-4 justify-between mb-3">
           <div>
-            Customer Name:
+            Nome do cliente:
             <span className="ml-2 font-normal">
               {order.deliveryDetails.name}
             </span>
           </div>
           <div>
-            Delivery address:
+            Endereço:
             <span className="ml-2 font-normal">
               {order.deliveryDetails.addressLine1}, {order.deliveryDetails.city}
             </span>

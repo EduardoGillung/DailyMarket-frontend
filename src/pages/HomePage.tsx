@@ -13,23 +13,27 @@ const HomePage = () => {
     }
  return (
    <div className="flex flex-col gap-12">
-        <div className=" md:px-32 bg-white rounded-lg shadow-md py-8 flex flex-col gap-5 text-center -mt-16">
-            <h1 className="text-5xl font-bold tracking-tight text-dailySecondary font-slab">
-                Fazer suas compras ficou ainda mais fácil
+        <div className=" md:px-32 bg-backgroundColor rounded-lg  py-10 flex flex-col gap-5 text-center -mt-14">
+            <h1 className="text-3xl font-bold tracking-tight text-PrimaryGrey font-redHat">
+            Busque o nome da sua cidade e encontre os restaurantes próximos!
             </h1>
-            <span className="font-semi-bold text-xl font-slab text-CustomGrey"> Tudo o que você precisa em um clique!</span>
-            <SearchBar 
-              placeHolder="Search by city or town" 
+            
+            <SearchBar
+            
+              placeHolder="Pesquisar nome da cidade para encontrar restaurantes próximos" 
               onSubmit={handleSearchSubmit}
+            
+
+              
             /> 
         </div>  
         <div className="grid md:grid-cols-2 gap-5">
             <img src={landingPage} />
             <div className="flex flex-col items-center justify-center gap-4 text-center">
-                <span className="font-bold text-3xl tracking-tighter text-dailyPrimary">
+                <span className="font-redHat text-3xl  text-dailyPrimary">
                     Faça seus pedidos de qualquer lugar!
                 </span>
-                <span className=" text-CustomGrey font-slab text-xl">
+                <span className=" text-CustomGrey font-redHat text-xl">
                     Instale o DailyMarket no seu celular e faça pedidos ainda mais rápido!
                 </span>
                 <img src={appDownload} />

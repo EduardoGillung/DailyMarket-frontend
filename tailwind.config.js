@@ -56,10 +56,13 @@ export default {
   				'5': 'hsl(var(--chart-5))'
   			},
 			// Inserindo as suas cores principais personalizadas
-			dailyPrimary: '#7A882A', // Cor personalizada 1
-			dailySecondary: '#504D23', // Cor personalizada 2
-			dailyTertiary: '#D7C59F', // Cor personalizada 3
-			CustomGrey: '#373737', //Cor 4
+			dailyPrimary: '#C31616', // Cor personalizada 1
+			dailySecondary: '#CC3833', // Cor personalizada 2
+			dailyTertiary: '#378040', // Cor personalizada 3
+			PrimaryGrey: '#3D3D3D', //Cor 4
+			SecondaryGrey: "#E7E7E7",
+			backgroundColor: "#FFFCF6",
+			GreyStroke: "#A9A9A9", 
   		},
 		  fontFamily: {
 			// Adicione sua fonte personalizada aqui
@@ -67,6 +70,9 @@ export default {
 			slab: ['Roboto Slab'],
 			serif:['Roboto Serif'],
 			mono: ['Roboto Mono'],
+			meow: ["Meow Script"],
+			redHat: ["Red Hat Display"],
+			orelega: ["Orelega One"],
 
 		  },
   	}

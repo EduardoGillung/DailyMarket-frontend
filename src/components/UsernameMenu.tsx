@@ -11,7 +11,7 @@ const UsernameMenu = () => {
     
     return(
         <DropdownMenu>
-            <DropdownMenuTrigger className="flex items-center px-6 w-full h-10 font-bold hover:bg-dailyPrimary text-dailySecondary rounded-xl gap-3">
+            <DropdownMenuTrigger className="flex items-center px-6 w-full h-10 font-bold hover:bg-white text-dailySecondary rounded-xl gap-3" >
                 <CircleUserRound className="text-dailySecondary" />
                 {user?.email}
             </DropdownMenuTrigger>
@@ -19,14 +19,14 @@ const UsernameMenu = () => {
             <DropdownMenuItem>
                     <Link
                         to="/manage-restaurant"
-                        className="font-bold hover:text-dailySecondary">
+                        className="font-redHat hover:text-dailySecondary">
                         Gerenciar restaurante
                     </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem>
                     <Link
                         to="/user-profile"
-                        className="font-bold hover:text-dailySecondary">
+                        className="font-redHat hover:text-dailySecondary">
                         Perfil do usuário
                     </Link>
                 </DropdownMenuItem>
@@ -34,7 +34,7 @@ const UsernameMenu = () => {
                 <DropdownMenuItem>
                     <Button
                         onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}
-                        className="flex flex-1 font-bold bg-dailyPrimary rounded-xl"
+                        className="flex flex-1 font-redHat bg-dailyPrimary rounded-xl"
                         >
                         Desconectar-se
                     </Button>

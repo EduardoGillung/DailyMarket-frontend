@@ -9,14 +9,14 @@ const OrderStatusDetail = ({ order }: Props) => {
   return (
     <div className="space-y-5">
       <div className="flex flex-col">
-        <span className="font-bold">Delivering to:</span>
+        <span className="font-bold">Entrega para:</span>
         <span>{order.deliveryDetails.name}</span>
         <span>
           {order.deliveryDetails.addressLine1}, {order.deliveryDetails.city}
         </span>
       </div>
       <div className="flex flex-col">
-        <span className="font-bold">Your Order</span>
+        <span className="font-bold">Seu pedido</span>
         <ul>
           {order.cartItems.map((item) => (
             <li>
