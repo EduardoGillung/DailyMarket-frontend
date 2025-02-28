@@ -76,7 +76,6 @@ const SearchBar = ({ onSubmit, onReset, placeHolder, searchQuery }: Props) => {
         <Button
           onClick={handleReset}
           type="button"
-          
           className="rounded-full bg-SecondaryGrey text-PrimaryGrey"
         >
           Limpar

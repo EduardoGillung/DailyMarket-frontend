@@ -27,15 +27,10 @@ const HomePage = () => {
               
             /> 
         </div>  
-        <div className="grid md:grid-cols-2 gap-5">
+        <div className="grid md:grid-cols-2">
             <img src={landingPage} />
             <div className="flex flex-col items-center justify-center gap-4 text-center">
-                <span className="font-redHat text-3xl  text-dailyPrimary">
-                    Faça seus pedidos de qualquer lugar!
-                </span>
-                <span className=" text-CustomGrey font-redHat text-xl">
-                    Instale o DailyMarket no seu celular e faça pedidos ainda mais rápido!
-                </span>
+                
                 <img src={appDownload} />
             </div>
         </div>

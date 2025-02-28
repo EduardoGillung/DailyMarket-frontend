@@ -8,7 +8,6 @@ const Header = () => {
     return(
         <div className="bg-backgroundColor py-7 rounded-b-lg ">
             <div className="container mx-auto flex justify-between items-center">
-                
                  <Link
                   to="/"
                   className="text-5xl font-meow  text-dailyPrimary"

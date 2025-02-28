@@ -11,7 +11,7 @@ const MainNav = () => {
             <>
                 <Link 
                 to="/order-status" 
-                className="font-redHat font-bold hover:bg-dailyPrimary text-dailyPrimary "
+                className="font-redHat font-bold hover:bg-dailyPrimary text-dailyPrimary hover:text-white rounded-xl "
                 >
                     Acompanhar pedidos
                 </Link>    
@@ -20,7 +20,7 @@ const MainNav = () => {
             ) : (
                 <Button 
                     variant="ghost" 
-                    className="font-redHat font-bold hover:bg-dailyPrimary text-dailyPrimary "
+                    className="font-redHat font-bold hover:bg-dailyPrimary text-dailyPrimary hover:text-white rounded-xl"
                     onClick={async () => await loginWithRedirect()}
                 >
                 Conectar conta
