@@ -55,7 +55,7 @@ const SearchBar = ({ onSubmit, onReset, placeHolder, searchQuery }: Props) => {
         <Search
           strokeWidth={2.5}
           size={30}
-          className="ml-1 text-GreyStroke hidden md:block"
+          className="ml-1 text-GreyStroke hidden md:block font-redHat"
         />
         <FormField
           control={form.control}
@@ -76,11 +76,11 @@ const SearchBar = ({ onSubmit, onReset, placeHolder, searchQuery }: Props) => {
         <Button
           onClick={handleReset}
           type="button"
-          className="rounded-full bg-SecondaryGrey text-PrimaryGrey"
+          className="rounded-full bg-SecondaryGrey text-PrimaryGrey font-redHat font-bold"
         >
           Limpar
         </Button>
-        <Button type="submit" className="rounded-full bg-dailyTertiary text-white hover:bg-SecondaryGrey" >
+        <Button type="submit" className="rounded-full bg-dailyTertiary text-white hover:bg-SecondaryGrey font-redHat font-bold"  >
           Buscar
         </Button>
       </form>

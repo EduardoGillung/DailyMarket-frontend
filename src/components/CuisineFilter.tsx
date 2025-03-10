@@ -1,6 +1,6 @@
 import { cuisineList } from "@/config/restaurant-options-config";
 import { Label } from "./ui/label";
-import { Check, ChevronDown, ChevronUp } from "lucide-react";
+import { Check } from "lucide-react";
 import { ChangeEvent } from "react";
 import { Button } from "./ui/button";
 
@@ -33,16 +33,16 @@ const CuisineFilter = ({
   return (
     <>
       <div className="flex justify-between items-center px-2">
-        <div className="text-md font-semibold mb-2">Filtrar pesquisa</div>
+        <div className="text-md font-semibold mb-2 text-PrimaryGrey">Filtrar pesquisa</div>
         <div
           onClick={handleCuisinesReset}
-          className="text-sm font-semibold mb-2 underline cursor-pointer text-blue-500"
+          className="text-sm font-redHat font-semibold mb-2 cursor-pointer text-blue-500"
         >
           Resetar filtros
         </div>
       </div>
 
-      <div className="space-y-2 flex flex-col">
+      <div className="space-y-2 flex flex-col text-PrimaryGrey">
         {cuisineList
           .slice(0, isExpanded ? cuisineList.length : 7)
           .map((cuisine) => {
@@ -77,15 +77,6 @@ const CuisineFilter = ({
           variant="link"
           className="mt-3 flex-1"
         >
-          {isExpanded ? (
-            <span className="flex flex-row items-center">
-              Ver menos <ChevronUp />
-            </span>
-          ) : (
-            <span className="flex flex-row items-center">
-              Ver mais <ChevronDown />
-            </span>
-          )}
         </Button>
       </div>
     </>

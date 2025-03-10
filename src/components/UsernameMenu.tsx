@@ -11,22 +11,22 @@ const UsernameMenu = () => {
     
     return(
         <DropdownMenu>
-            <DropdownMenuTrigger className="flex items-center px-6 w-full h-10 font-bold hover:bg-white text-dailySecondary rounded-xl gap-3" >
-                <CircleUserRound className="text-dailySecondary" />
-                {user?.email}
-            </DropdownMenuTrigger>
-            <DropdownMenuContent className="bg-white shadow-lg rounded-xl p-8 space-y-2">
+            <DropdownMenuTrigger className="flex items-center justify-center p-5 w-full h-10 font-bold font-redHat hover:bg-dailyPrimary text-dailyPrimary hover:text-white rounded-xl ">
+                <CircleUserRound className="text-dailySecondary mr-2" />
+                    <span>{user?.email}</span>
+        </DropdownMenuTrigger>
+            <DropdownMenuContent className="bg-white shadow-lg rounded-xl p-8 space-y-2 ">
             <DropdownMenuItem>
                     <Link
                         to="/manage-restaurant"
-                        className="font-redHat hover:text-dailySecondary">
+                        className="font-redHat hover:text-dailySecondary font-semibold">
                         Gerenciar restaurante
                     </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem>
                     <Link
                         to="/user-profile"
-                        className="font-redHat hover:text-dailySecondary">
+                        className="font-redHat hover:text-dailySecondary font-semibold">
                         Perfil do usuário
                     </Link>
                 </DropdownMenuItem>
@@ -34,7 +34,7 @@ const UsernameMenu = () => {
                 <DropdownMenuItem>
                     <Button
                         onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}
-                        className="flex flex-1 font-redHat bg-dailyPrimary rounded-xl"
+                        className="flex flex-auto font-redHat bg-dailyPrimary rounded-xl text-white font-semibold hover:text-PrimaryGrey"
                         >
                         Desconectar-se
                     </Button>
