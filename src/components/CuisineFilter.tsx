@@ -36,7 +36,7 @@ const CuisineFilter = ({
         <div className="text-md font-semibold mb-2 text-PrimaryGrey">Filtrar pesquisa</div>
         <div
           onClick={handleCuisinesReset}
-          className="text-sm font-redHat font-semibold mb-2 cursor-pointer text-blue-500"
+          className="text-sm font-redHat font-semibold mb-2 cursor-pointer text-blue-500 hover:underline"
         >
           Resetar filtros
         </div>
@@ -59,7 +59,7 @@ const CuisineFilter = ({
                 />
                 <Label
                   htmlFor={`cuisine_${cuisine}`}
-                  className={`flex flex-1 items-center cursor-pointer text-sm rounded-full px-4 py-2 font-semibold ${
+                  className={`flex flex-1 items-center cursor-pointer text-sm rounded-full px-4 py-2 font-semibold hover:bg-dailyPrimary hover:text-white ${
                     isSelected
                       ? "border border-green-600 text-green-600"
                       : "border border-slate-300"

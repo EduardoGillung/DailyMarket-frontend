@@ -12,7 +12,7 @@ const SearchResultInfo = ({ total, city }: Props) => {
             <span className="text-dailyPrimary mx-1">{total} </span> Estabelecimentos encontrados em 
             <span className="text-dailyPrimary mx-1">{city}</span>
             
-            <Link to="/" className="mx-5 text-sm font-redHat font-semibold cursor-pointer text-blue-500">
+            <Link to="/" className="mx-5 text-sm font-redHat font-semibold cursor-pointer text-blue-500 hover:underline">
                 Alterar localização
             </Link>
         </span>

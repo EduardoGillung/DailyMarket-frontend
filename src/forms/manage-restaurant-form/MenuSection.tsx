@@ -12,11 +12,11 @@ const MenuSection = () => {
     });
 
     return (
-        <div className="space-y-2">
+        <div className="space-y-2 text-PrimaryGrey">
             <div> 
-              <h2 className="text-2xl font-bold"> Menu </h2>          
+              <h2 className="text-2xl font-bold "> Menu / Cardápio </h2>          
               <FormDescription>
-                Create your menu and give each item a name and a price
+                Crie seu cardápio com todos os itens que deseja vender e defina os seus preços!
               </FormDescription>
             </div>
               <FormField control={control} name="menuItems" render={()=> (
@@ -32,9 +32,9 @@ const MenuSection = () => {
             />
             <Button 
               type="button"
-              className="rounded-xl gap-2"
+              className="rounded-xl gap-2 bg-dailyTertiary text-white hover:text-dailyTertiary"
               onClick={() => append({ name: "", price: "" })}>
-                Add Menu Item
+                Adicionar item ao cardápio
             </Button>
         </div>
     );

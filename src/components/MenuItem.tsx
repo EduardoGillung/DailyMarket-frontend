@@ -8,9 +8,9 @@ type Props = {
 
 const MenuItem = ({ menuItem, addToCart }: Props) => {
   return (
-    <Card className="cursor-pointer" onClick={addToCart}>
+    <Card className="cursor-pointer font-redHat text-PrimaryGrey hover:shadow-GreyStroke hover:text-dailyPrimary" onClick={addToCart}>
       <CardHeader>
-        <CardTitle className="font-medium">{menuItem.name}</CardTitle>
+        <CardTitle className="text-xl">{menuItem.name}</CardTitle>
       </CardHeader>
       <CardContent className="font-bold">
         ${(menuItem.price / 100).toFixed(2)}

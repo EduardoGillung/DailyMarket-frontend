@@ -15,10 +15,10 @@ const PaginationSelector = ({ page, pages, onPageChange }: Props) => {
     }
 
     return (
-        <Pagination>
-            <PaginationContent>
+        <Pagination  className="font-redHat text-PrimaryGrey ">
+            <PaginationContent >
                 {page !== 1 && (
-                <PaginationItem>
+                <PaginationItem >
                     <PaginationPrevious 
                         href='#' 
                         onClick={() => onPageChange(page - 1)} 

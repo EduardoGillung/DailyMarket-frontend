@@ -11,19 +11,18 @@ const ImageSection = () => {
     return (
         <div className="space-y-2">
             <div>
-                <h2 className="text-2xl font-bold">Image</h2>
+                <h2 className="text-2xl font-bold">Imagem da pizzaria</h2>
                 <FormDescription>
-                    Add an image that will be displayed on your restaurant listing in the
-                    search results. Adding a new image will overwrite the existing one.
+                    Adicione a imagem ou logo do seu restaurante que irá aparecer ao buscarem. Adicionar uma nova imagem já possuindo, irá sobrepor a antiga imagem.
                 </FormDescription>
             </div>
             
-            <div className="flex flex-col gap-8 md:w-[50%]">
+            <div className="flex flex-col gap-8 md:w-[35%]">
               {existingImageUrl && (
                 <AspectRatio ratio={16/9}>
                   <img 
                    src={existingImageUrl}
-                   className="rounded-md object-cover h-full w-full"
+                   className="rounded-xl object-cover h-full w-full"
                   />
                 </AspectRatio>
               )}

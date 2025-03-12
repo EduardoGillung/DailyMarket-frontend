@@ -11,7 +11,7 @@ const MobileNavLinks = () => {
             to="/order-status" 
             className="font-bold hover:text-dailySecondary"
         >
-            Order Status
+            Status do pedido
         </Link>
 
         <Link 

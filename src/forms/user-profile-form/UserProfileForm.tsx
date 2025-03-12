@@ -30,8 +30,8 @@ const UserProfileForm = ({
     onSave, 
     isLoading, 
     currentUser, 
-    title = "User Profile",
-    buttonText = "Submit",
+    title = "Perfil do Usúario",
+    buttonText = "Salvar",
    }: Props) => {
     const form = useForm<UserFormData>({
         resolver: zodResolver(formSchema),
@@ -46,12 +46,12 @@ const UserProfileForm = ({
         <Form {...form}>
             <form 
               onSubmit={form.handleSubmit(onSave)} 
-              className="space-y-4 bg-gray-50 rounded-lg md:p-10"
+              className="space-y-4 md:p-10 font-redHat text-PrimaryGrey rounded-xl "
             >
                 <div>
-                    <h2 className="text-2xl font-bold">{title}</h2>
+                    <h2 className="text-3xl font-bold ">{title}</h2>
                     <FormDescription>
-                      Suas informações ficam aqui caso deseje é possivel altera-lás.
+                      Preencha seu perfil e salve o endereço que será utilizado para receber o pedido
                     </FormDescription>
                 </div>
                   <FormField 
@@ -125,7 +125,7 @@ const UserProfileForm = ({
                 </div>
                     {isLoading ? (<LoadingButton />
                 ) : (
-                    <Button type="submit" className="bg-dailyPrimary rounded-xl text-white">
+                    <Button type="submit" className="bg-dailyTertiary rounded-xl text-white">
                         {buttonText}
                     </Button>
                 )}

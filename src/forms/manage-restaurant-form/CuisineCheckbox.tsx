@@ -29,7 +29,7 @@ const CuisineCheckBox = ({ cuisine, field }: Props) => {
                   }}
                 />    
             </FormControl>
-            <FormLabel className="text-sm font-normal">{cuisine}</FormLabel>
+            <FormLabel className="text-sm font-redHat">{cuisine}</FormLabel>
         </FormItem>
     );
 };

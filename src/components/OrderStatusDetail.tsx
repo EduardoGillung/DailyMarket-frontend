@@ -7,9 +7,9 @@ type Props = {
 
 const OrderStatusDetail = ({ order }: Props) => {
   return (
-    <div className="space-y-5">
+    <div className="space-y-5 font-redHat text-PrimaryGrey rounded-xl">
       <div className="flex flex-col">
-        <span className="font-bold">Entrega para:</span>
+        <span className="font-bold">Entregar para:</span>
         <span>{order.deliveryDetails.name}</span>
         <span>
           {order.deliveryDetails.addressLine1}, {order.deliveryDetails.city}
@@ -27,8 +27,8 @@ const OrderStatusDetail = ({ order }: Props) => {
       </div>
       <Separator />
       <div className="flex flex-col">
-        <span className="font-bold">Total</span>
-        <span>£{(order.totalAmount / 100).toFixed(2)}</span>
+        <span className="font-bold">Valor total</span>
+        <span>${(order.totalAmount / 100).toFixed(2)}</span>
       </div>
     </div>
   );

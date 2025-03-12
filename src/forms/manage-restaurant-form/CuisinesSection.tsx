@@ -7,11 +7,11 @@ const CuisinesSection = () => {
    const { control } = useFormContext();
 
    return (
-    <div className="space-y-2">
+    <div className="space-y-5 rounded-xl text-PrimaryGrey">
       <div>
-        <h2 className="text-2xl font-bold">Cuisines</h2>
-        <FormDescription>
-            Select the cuisines that your restaurant serves
+        <h2 className="text-3xl font-bold">Entregas e Pagamento</h2>
+        <FormDescription className="text-2x1">
+            Selecione os formatos de entrega e pagamento que seu estabelecimento disponinibiliza para o cliente:
         </FormDescription>
     </div>
     <FormField 

@@ -5,10 +5,10 @@ import { useFormContext } from "react-hook-form";
 const DetailsSection = () => {
     const { control } = useFormContext();
     return (
-        <div className="space-y-2">
-          <h2 className="text-2xl font-bold">Restaurant details</h2>
+        <div className="space-y-2 text-PrimaryGrey">
+          <h2 className="text-3xl font-bold">Informações da Pizzaria</h2>
           <FormDescription>
-            Enter the details about your restaurant
+            Preencha as informações e adicione o cardápio da sua pizzaria, é rapidinho!
           </FormDescription>          
         
         <FormField
@@ -16,7 +16,7 @@ const DetailsSection = () => {
             name="restaurantName"
             render= {({ field }) => ( 
             <FormItem>
-                <FormLabel>Name</FormLabel>
+                <FormLabel>Nome da Pizzaria</FormLabel>
               <FormControl>
                 <Input {...field} className="bg-white rounded-xl gap-2" />
               </FormControl>
@@ -30,7 +30,7 @@ const DetailsSection = () => {
                 name="city"
                 render= {({ field }) => ( 
                 <FormItem className="flex-1">
-                    <FormLabel>City</FormLabel>
+                    <FormLabel>Cidade</FormLabel>
                 <FormControl>
                     <Input {...field} className="bg-white rounded-xl gap-2"/>
                 </FormControl>
@@ -43,7 +43,7 @@ const DetailsSection = () => {
                 name="country"
                 render= {({ field }) => ( 
                 <FormItem className="flex-1">
-                    <FormLabel>Country</FormLabel>
+                    <FormLabel>País</FormLabel>
                 <FormControl>
                     <Input {...field} className="bg-white rounded-xl gap-2"/>
                 </FormControl>
@@ -56,7 +56,7 @@ const DetailsSection = () => {
                 name="deliveryPrice"
                 render= {({ field }) => ( 
                 <FormItem className="max-w-[25%]">
-                    <FormLabel>Delivery price($)</FormLabel>
+                    <FormLabel>Valor da entrega($)</FormLabel>
                 <FormControl>
                     <Input {...field} className="bg-white rounded-xl gap-2" placeholder=""/>
                 </FormControl>
@@ -69,7 +69,7 @@ const DetailsSection = () => {
                 name="estimatedDeliveryTime"
                 render={({ field }) => (
                 <FormItem className="max-w-[25%]">
-                    <FormLabel>Estimated Delivery Time (minutes)</FormLabel>
+                    <FormLabel>Tempo estimado da entrega: (minutos)</FormLabel>
                     <FormControl>
                     <Input {...field} className="bg-white rounded-xl gap-2" placeholder="" />
                     </FormControl>

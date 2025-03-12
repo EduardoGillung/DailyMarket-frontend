@@ -35,8 +35,8 @@ const CheckoutButton = ({ onCheckout, disabled, isLoading }: Props) => {
 
   if (!isAuthenticated) {
     return (
-      <Button onClick={onLogin} className="bg-dailyPrimary flex-1">
-        Log in to check out
+      <Button onClick={onLogin} className="bg-dailyPrimary flex-1  text-white rounded-xl h-10">
+        Faça o login para continuar
       </Button>
     );
   }
@@ -48,17 +48,17 @@ const CheckoutButton = ({ onCheckout, disabled, isLoading }: Props) => {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button disabled={disabled} className="bg-dailyPrimary flex-1">
-          Go to checkout
+        <Button disabled={disabled} className="bg-dailyTertiary text-white flex-1 rounded-xl h-10 hover:text-dailyTertiary">
+          Continuar 
         </Button>
       </DialogTrigger>
-      <DialogContent className="max-w-[425px] md:min-w-[700px] bg-gray-50">
+      <DialogContent className="max-w-[425px] md:min-w-[700px] bg-backgroundColor ">
         <UserProfileForm
           currentUser={currentUser}
           onSave={onCheckout}
           isLoading={isGetUserLoading}
-          title="Confirm Delivery Details"
-          buttonText="Continue to payment"
+          title="Confirme suas informações para realizar seu pedido"
+          buttonText="Continuar para o pagamento"
         />
       </DialogContent>
     </Dialog>

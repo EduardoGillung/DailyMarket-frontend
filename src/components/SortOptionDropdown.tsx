@@ -29,14 +29,14 @@ const SortOptionDropdown = ({ onChange, sortOption }: Props) => {
     return (
         <DropdownMenu>
             <DropdownMenuTrigger className="cursor-pointer font-redHat">
-                <Button className="w-full rounded-xl text-PrimaryGrey font-bold">
-                    Ordenar por: <span className="text-dailyPrimary font-bold px-1">{selectedSortLabel}</span>
+                <Button className="w-full  rounded-xl text-PrimaryGrey font-bold hover:bg-SecondaryGrey">
+                    Ordenar por: <span className="text-PrimaryGrey font-bold px-1">{selectedSortLabel}</span>
                 </Button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent>
+            <DropdownMenuContent className="shadow-md hover:shadow-lg transition-shadow duration-200 rounded-xl bg-backgroundColor ">
                 {SORT_OPTIONS.map((option) => (
                     <DropdownMenuItem 
-                      className="cursor-pointer font-redHat px-5" 
+                      className=" text-PrimaryGrey cursor-pointer font-redHat px-5 h-10 rounded-xl text-center flex items-center justify-center hover:bg-dailyPrimary hover:text-white"
                       onClick={() => onChange(option.value)}
                     >
                       {option.label}
