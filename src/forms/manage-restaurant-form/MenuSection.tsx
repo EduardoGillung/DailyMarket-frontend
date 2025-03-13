@@ -14,7 +14,7 @@ const MenuSection = () => {
     return (
         <div className="space-y-2 text-PrimaryGrey">
             <div> 
-              <h2 className="text-2xl font-bold "> Menu / Cardápio </h2>          
+              <h2 className="text-2xl font-bold "> Adicione seu Cardápio </h2>          
               <FormDescription>
                 Crie seu cardápio com todos os itens que deseja vender e defina os seus preços!
               </FormDescription>

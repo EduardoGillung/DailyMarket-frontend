@@ -17,11 +17,11 @@ const OrderStatusPage = () => {
   return (
     <div className="space-y-10">
       {orders.map((order) => (
-        <div className="space-y-10 bg-white p-10 rounded-xl border border-SecondaryGrey">
+        <div className="space-y-10 bg-white p-10 rounded-xl border border-SecondaryGrey ">
           <OrderStatusHeader order={order} />
           <div className="grid gap-10 md:grid-cols-2">
             <OrderStatusDetail order={order} />
-            <AspectRatio ratio={ 12 / 6}>
+            <AspectRatio ratio={ 3 / 1 }>
               <img
                 src={order.restaurant.imageUrl}
                 className="rounded-xl object-cover h-full w-full"

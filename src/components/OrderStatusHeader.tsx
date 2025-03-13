@@ -30,7 +30,7 @@ const OrderStatusHeader = ({ order }: Props) => {
 
   return (
     <>
-      <h1 className="text-3xl font-bold font-redHat text-PrimaryGrey tracking-tighter flex flex-col gap-5 md:flex-row md:justify-between rounded-xl">
+      <h1 className="text-3xl font-redHat font-bold  text-PrimaryGrey tracking-tighter flex flex-col gap-5 md:flex-row md:justify-between rounded-xl">
         <span> Status do pedido: {getOrderStatusInfo().label}</span>
         <span> Expectiva de entrega: {getExpectedDelivery()}</span>
       </h1>

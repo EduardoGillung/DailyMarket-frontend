@@ -46,9 +46,9 @@ const OrderItemCard = ({ order }: Props) => {
   };
 
   return (
-    <Card>
+    <Card className="rounded-xl">
       <CardHeader>
-        <CardTitle className="grid md:grid-cols-4 gap-4 justify-between mb-3 text-PrimaryGrey">
+        <CardTitle className="grid md:grid-cols-4 gap-4 justify-between mb-3 text-PrimaryGrey ">
           <div className="font-bold"> 
             Nome do cliente:
             <span className="ml-2 font-normal">
@@ -86,21 +86,21 @@ const OrderItemCard = ({ order }: Props) => {
           ))}
         </div>
         <div className="flex flex-col space-y-4 px-10 rounded-xl">
-          <Label htmlFor="status" className="font-bold">Qual é o status do seu pedido?</Label>
-          <Select 
+          <Label htmlFor="status" className="font-bold text-xl">Qual é o status do seu pedido?</Label>
+          <Select
             value={status}
             disabled={isLoading}
             onValueChange={(value) => handleStatusChange(value as OrderStatus)}
           >
-            <SelectTrigger id="status" >
-              <SelectValue placeholder="Status"/>
+            <SelectTrigger id="status" className="rounded-xl border-SecondaryGrey font-bold text-dailyPrimary hover:bg-white hover:text-dailyPrimary" >
+              <SelectValue placeholder="Status" />
             </SelectTrigger>
             <SelectContent
               position="popper"
-              className="bg-white border border-gray-300 shadow-lg z-10 rounded-xl "
+              className="bg-white border-SecondaryGrey shadow-lg z-10 rounded-xl"
             >
               {ORDER_STATUS.map((status) => (
-                <SelectItem value={status.value} className="hover:bg-gray-100">
+                <SelectItem value={status.value} className="hover:bg-green-500 ">
                   {status.label}
                 </SelectItem>
               ))}
