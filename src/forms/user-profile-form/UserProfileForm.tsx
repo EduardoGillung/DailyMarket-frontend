@@ -125,7 +125,7 @@ const UserProfileForm = ({
                 </div>
                     {isLoading ? (<LoadingButton />
                 ) : (
-                    <Button type="submit" className="bg-dailyTertiary rounded-xl text-white">
+                    <Button type="submit" className="bg-dailyTertiary rounded-xl text-white h-10 hover:text-dailyTertiary">
                         {buttonText}
                     </Button>
                 )}

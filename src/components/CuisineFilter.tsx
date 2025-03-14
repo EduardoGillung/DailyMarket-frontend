@@ -59,7 +59,7 @@ const CuisineFilter = ({
                 />
                 <Label
                   htmlFor={`cuisine_${cuisine}`}
-                  className={`flex flex-1 items-center cursor-pointer text-sm rounded-full px-4 py-2 font-semibold hover:bg-dailyPrimary hover:text-white ${
+                  className={`flex flex-1 items-center cursor-pointer text-sm rounded-xl px-4 py-2 font-semibold hover:bg-dailyPrimary hover:text-white ${
                     isSelected
                       ? "border border-green-600 text-green-600"
                       : "border border-slate-300"

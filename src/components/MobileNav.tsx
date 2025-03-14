@@ -12,15 +12,16 @@ const MobileNav = () => {
             <SheetTrigger>
                 <Menu className="text-dailyPrimary" />
             </SheetTrigger>
-            <SheetContent className="space-y-3 bg-white">
+            <SheetContent className="space-y-3 bg-backgroundColor rounded-xl">
                 <SheetTitle>
                     {isAuthenticated ? (
                         <span className="flex items-center font-bold gap-2">
-                            <CircleUserRound className="text-dailySecondary" />
+                            <CircleUserRound className="text-dailyPrimary rounded-xl" />
                             {user?.email}
                         </span>
                     ) : (
-                        <span className="text-dailyPrimary"> Bem vindo ao DailyMarket! </span>
+                        <span className="text-dailyPrimary font-redHat font-bold text-2xl hover:text-dailyPrimary hover:bg-white"> Bem vindo ao Pizzario! </span>
+    
                     )}
                     
                 </SheetTitle>
@@ -31,7 +32,7 @@ const MobileNav = () => {
                     ) : (
                       <Button 
                         onClick={() => loginWithRedirect()}
-                        className="flex-1 font-bold bg-dailyPrimary"
+                        className="flex-1 font-bold bg-dailyPrimary rounded-xl text-white font-redHat"
                       >
                         Conectar-se
                       </Button>                       
