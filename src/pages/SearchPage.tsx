@@ -68,11 +68,11 @@ const SearchPage = () => {
   };
 
   if (isLoading) {
-    <span>Loading ...</span>;
+    <span>Carregando resultados...</span>;
   }
 
   if (!results?.data || !city) {
-    return <span>No results found</span>;
+    return <span className="text-2xl font-redHat font-bold text-PrimaryGrey">Nenhum estabelecimento encontrado nesta região</span>;
   }
 
   return (
