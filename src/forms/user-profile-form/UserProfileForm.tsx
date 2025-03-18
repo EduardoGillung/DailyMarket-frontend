@@ -46,10 +46,10 @@ const UserProfileForm = ({
         <Form {...form}>
             <form 
               onSubmit={form.handleSubmit(onSave)} 
-              className="space-y-4 md:p-10 font-redHat text-PrimaryGrey rounded-xl "
+              className="space-y-4 md:p-10 font-redHat text-PrimaryGrey"
             >
                 <div>
-                    <h2 className="text-3xl font-bold ">{title}</h2>
+                    <h2 className="text-3xl font-bold">{title}</h2>
                     <FormDescription>
                       Preencha seu perfil e salve o endereço que será utilizado para receber o pedido
                     </FormDescription>
@@ -61,7 +61,7 @@ const UserProfileForm = ({
                       <FormItem>
                         <FormLabel>E-mail</FormLabel>
                         <FormControl>
-                            <Input {...field} disabled className="bg-white  rounded-xl"/>
+                            <Input {...field} disabled className="bg-white rounded-xl border-SecondaryGrey"/>
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -74,7 +74,7 @@ const UserProfileForm = ({
                       <FormItem className="flex-1">
                         <FormLabel>Nome</FormLabel>
                         <FormControl>
-                            <Input {...field} className="bg-white  rounded-xl" />
+                            <Input {...field} className="bg-white  rounded-xl border-border-SecondaryGrey" />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -89,7 +89,7 @@ const UserProfileForm = ({
                       <FormItem className="flex-1">
                         <FormLabel>Endereço</FormLabel>
                         <FormControl>
-                            <Input {...field} className="bg-white  rounded-xl" />
+                            <Input {...field} className="bg-white  rounded-xl border-border-SecondaryGrey" />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -103,7 +103,7 @@ const UserProfileForm = ({
                       <FormItem className="flex-1">
                         <FormLabel>Cidade</FormLabel>
                         <FormControl>
-                            <Input {...field} className="bg-white rounded-xl" />
+                            <Input {...field} className="bg-white rounded-xl border-border-SecondaryGrey" />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -116,7 +116,7 @@ const UserProfileForm = ({
                       <FormItem className="flex-1">
                         <FormLabel>País</FormLabel>
                         <FormControl>
-                            <Input {...field} className="bg-white  rounded-xl" />
+                            <Input {...field} className="bg-white  rounded-xl border-border-SecondaryGrey" />
                         </FormControl>
                         <FormMessage />
                       </FormItem>

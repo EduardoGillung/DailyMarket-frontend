@@ -35,7 +35,7 @@ const CheckoutButton = ({ onCheckout, disabled, isLoading }: Props) => {
 
   if (!isAuthenticated) {
     return (
-      <Button onClick={onLogin} className="bg-dailyPrimary flex-1  text-white rounded-xl h-10">
+      <Button onClick={onLogin} className="bg-dailyPrimary flex-1  text-white rounded-xl h-10 hover:text-dailyPrimary">
         Faça o login para continuar
       </Button>
     );
@@ -48,11 +48,11 @@ const CheckoutButton = ({ onCheckout, disabled, isLoading }: Props) => {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button disabled={disabled} className="bg-dailyTertiary text-white flex-1 rounded-xl h-10 hover:text-dailyTertiary">
+        <Button disabled={disabled} className="bg-dailyTertiary text-white flex-1 h-10 hover:text-dailyTertiary rounded-xl">
           Continuar 
         </Button>
       </DialogTrigger>
-      <DialogContent className="max-w-[425px] md:min-w-[700px] bg-backgroundColor ">
+      <DialogContent className="max-w-[425px] md:min-w-[700px] bg-backgroundColor">
         <UserProfileForm
           currentUser={currentUser}
           onSave={onCheckout}

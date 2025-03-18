@@ -3,7 +3,6 @@ import MenuItem from "@/components/MenuItem";
 import OrderSummary from "@/components/OrderSummary";
 import RestaurantInfo from "@/components/RestaurantInfo";
 import { Card, CardFooter } from "@/components/ui/card";
-import { AspectRatio } from "@radix-ui/react-aspect-ratio";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { MenuItem as MenuItemType } from "@/types";
@@ -112,17 +111,12 @@ const DetailPage = () => {
     }
 
     return (
-        <div className="flex flex-col gap-10">
-            <AspectRatio ratio={16 / 5}>
-                <img
-                  src={restaurant.imageUrl}
-                  className="rounded-md object-cover h-full w-full"
-                  />
-            </AspectRatio>
+        <div className="flex flex-col gap-5">
+            
             <div className="grid md:grid-cols-[4fr_2fr] gap-5 md:px-32">
                 <div className="flex flex-col gap-4">
                     <RestaurantInfo restaurant={restaurant} />
-                    <span className="text-2xl font-bold tracking-tight">Menu</span>
+                    <span className="text-2xl font-bold tracking-tight px-2 text-PrimaryGrey font-redHat">Menu</span>
                     {restaurant.menuItems.map((menuItem) => (
                         <MenuItem 
                             menuItem={menuItem} addToCart={() => addToCart(menuItem)}/>

@@ -23,9 +23,9 @@ const ManageRestaurantPage = () => {
 
   return (
     <Tabs defaultValue="orders">
-      <TabsList className="rounded-xl ">
-        <TabsTrigger value="orders" className="text-3xl text-PrimaryGrey font-redHat font-bold  hover:text-white hover:bg-dailyPrimary ">Pedidos</TabsTrigger>
-        <TabsTrigger value="manage-restaurant" className="text-PrimaryGrey text-2xl font-redHat font-bold  hover:text-white hover:bg-dailyPrimary ">Gerenciar Pizzaria</TabsTrigger>
+      <TabsList>
+        <TabsTrigger value="orders" className="rounded-xl text-3xl text-PrimaryGrey font-redHat font-bold hover:text-white hover:bg-dailyPrimary data-[state=active]:bg-dailyPrimary data-[state=active]:text-white">Pedidos</TabsTrigger>
+        <TabsTrigger value="manage-restaurant" className="rounded-xl text-PrimaryGrey text-2xl font-redHat font-bold  hover:text-white hover:bg-dailyPrimary data-[state=active]:bg-dailyPrimary data-[state=active]:text-white">Gerenciar Pizzaria</TabsTrigger>
       </TabsList>
       <TabsContent
         value="orders"

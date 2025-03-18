@@ -18,13 +18,13 @@ const DetailsSection = () => {
             <FormItem>
                 <FormLabel>Nome da Pizzaria</FormLabel>
               <FormControl>
-                <Input {...field} className="bg-white rounded-xl gap-2" />
+                <Input {...field} className="bg-white rounded-xl gap-2 border-SecondaryGrey" />
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
         />
-        <div className="flex gap-4"></div>
+        <div className="flex gap-4 "></div>
             <FormField
                 control={control}
                 name="city"
@@ -32,7 +32,7 @@ const DetailsSection = () => {
                 <FormItem className="flex-1">
                     <FormLabel>Cidade</FormLabel>
                 <FormControl>
-                    <Input {...field} className="bg-white rounded-xl gap-2"/>
+                    <Input {...field} className="bg-white rounded-xl gap-2 border-SecondaryGrey"/>
                 </FormControl>
                 <FormMessage />
                 </FormItem>
@@ -45,7 +45,7 @@ const DetailsSection = () => {
                 <FormItem className="flex-1">
                     <FormLabel>País</FormLabel>
                 <FormControl>
-                    <Input {...field} className="bg-white rounded-xl gap-2"/>
+                    <Input {...field} className="bg-white rounded-xl gap-2 border-SecondaryGrey"/>
                 </FormControl>
                 <FormMessage />
                 </FormItem>
@@ -58,7 +58,7 @@ const DetailsSection = () => {
                 <FormItem className="max-w-[25%]">
                     <FormLabel>Valor da entrega($)</FormLabel>
                 <FormControl>
-                    <Input {...field} className="bg-white rounded-xl gap-2" placeholder=""/>
+                    <Input {...field} className="bg-white rounded-xl gap- border-SecondaryGrey" placeholder=""/>
                 </FormControl>
                 <FormMessage />
                 </FormItem>
@@ -71,7 +71,7 @@ const DetailsSection = () => {
                 <FormItem className="max-w-[25%]">
                     <FormLabel>Tempo estimado da entrega: (minutos)</FormLabel>
                     <FormControl>
-                    <Input {...field} className="bg-white rounded-xl gap-2" placeholder="" />
+                    <Input {...field} className="bg-white rounded-xl gap-2 border-SecondaryGrey" placeholder="" />
                     </FormControl>
                     <FormMessage />
                 </FormItem>

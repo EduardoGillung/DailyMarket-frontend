@@ -12,7 +12,7 @@ const MenuSection = () => {
     });
 
     return (
-        <div className="space-y-2 text-PrimaryGrey">
+        <div className="space-y-2 text-PrimaryGrey ">
             <div> 
               <h2 className="text-2xl font-bold "> Adicione seu Cardápio </h2>          
               <FormDescription>
@@ -20,7 +20,7 @@ const MenuSection = () => {
               </FormDescription>
             </div>
               <FormField control={control} name="menuItems" render={()=> (
-                <FormItem className="flex flex-col gap-2">
+                <FormItem className="flex flex-col gap-2 ">
                     {fields.map((_, index) => (
                         <MenuItemInput 
                           index={index} 
@@ -32,7 +32,7 @@ const MenuSection = () => {
             />
             <Button 
               type="button"
-              className="rounded-xl gap-2 bg-dailyTertiary text-white hover:text-dailyTertiary"
+              className="rounded-xl gap-2 bg-dailyTertiary text-white hover:text-dailyTertiary "
               onClick={() => append({ name: "", price: "" })}>
                 Adicionar item ao cardápio
             </Button>

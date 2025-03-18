@@ -46,7 +46,7 @@ const OrderItemCard = ({ order }: Props) => {
   };
 
   return (
-    <Card className="rounded-xl">
+    <Card className="rounded-xl bg-white">
       <CardHeader>
         <CardTitle className="grid md:grid-cols-4 gap-4 justify-between mb-3 text-PrimaryGrey ">
           <div className="font-bold"> 
@@ -92,12 +92,12 @@ const OrderItemCard = ({ order }: Props) => {
             disabled={isLoading}
             onValueChange={(value) => handleStatusChange(value as OrderStatus)}
           >
-            <SelectTrigger id="status" className="rounded-xl border-SecondaryGrey font-bold text-dailyPrimary hover:bg-white hover:text-dailyPrimary" >
+            <SelectTrigger id="status" className="rounded-xl border-SecondaryGrey font-bold text-dailyPrimary bg-white hover:text-dailyPrimary" >
               <SelectValue placeholder="Status" />
             </SelectTrigger>
             <SelectContent
               position="popper"
-              className="bg-white border-SecondaryGrey shadow-lg z-10 rounded-xl"
+              className="bg-white border-SecondaryGrey shadow-lg z-10 rounded-xl text-PrimaryGrey font-redHat"
             >
               {ORDER_STATUS.map((status) => (
                 <SelectItem value={status.value} className="hover:bg-green-500 ">

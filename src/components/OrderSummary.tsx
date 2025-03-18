@@ -28,21 +28,21 @@ const OrderSummary = ({ restaurant, cartItems, removeFromCart }: Props) => {
     return (
         <>
             <CardHeader>
-                <CardTitle className="text-2xl font-bold tracking-tight flex justify-between">
+                <CardTitle className="text-2xl font-bold tracking-tight flex justify-between font-redHat text-PrimaryGrey">
                     <span>Seu pedido</span>
                     <span>$ {getTotalCost()}</span>
                 </CardTitle>     
             </CardHeader>
             <CardContent className="flex flex-col gap-5">
                 {cartItems.map((item) => (
-                    <div className="flex justify-between">
+                    <div className="flex justify-between font-redHat text-PrimaryGrey">
                         <span>
                             <Badge variant="outline" className="mr-2">
                                 {item.quantity}
                             </Badge>          
                             {item.name}
                         </span>
-                        <span className="flex items-center gap-1">
+                        <span className="flex items-center gap-1 font-redHat text-PrimaryGrey">
                             <Trash 
                                 className="cursor-pointer" 
                                 color="red" 
@@ -54,8 +54,8 @@ const OrderSummary = ({ restaurant, cartItems, removeFromCart }: Props) => {
                     </div>
                 ))}
                 <Separator/>
-                <div className="flex justify-between">
-                    <span>Entrega</span>
+                <div className="flex justify-between font-redHat text-PrimaryGrey">
+                    <span>Valor da entrega:</span>
                     <span>${(restaurant.deliveryPrice / 100).toFixed(2)}</span>  
                 </div>
                 <Separator/>
