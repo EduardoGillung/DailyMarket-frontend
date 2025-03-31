@@ -24,11 +24,11 @@ const MainNav = () => {
             ) : (
                 <Button 
                     variant="ghost" 
-                    className="flex-auto px-5 font-redHat font-bold hover:bg-dailyPrimary text-dailyPrimary hover:text-white rounded-xl "
+                    className="flex-auto px-5 h-10 font-redHat font-bold hover:bg-dailyPrimary text-dailyPrimary hover:text-white rounded-xl "
                     onClick={async () => await loginWithRedirect()}
                     
                 >
-                <CircleUserRound className="text-dailySecondary mr-2 " /> 
+                <CircleUserRound className="text-dailySecondary mr-2" /> 
                 Conectar conta
                 </Button>
                 

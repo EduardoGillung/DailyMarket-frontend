@@ -1,16 +1,17 @@
+import { Link } from "react-router-dom";
+
 const Footer = () => {
     return(
-    <div className="bg-dailyPrimary py-8">
-        <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
-            <span className="text-5xl text-white font-meow tracking-tight">
-                Pizzario
-            </span>
-            <span className="text-white font-bold tracking-tight flex gap-4 font-redHat">
-                <span>Politicas de privacidade</span>
-                <span>Termos de uso</span>
-            </span>
+    <div className="bg-dailyPrimary py-5 px-10 font-redHat text-backgroundColor">
+   
+
+            <div className="container mx-auto flex flex-col md:flex-row justify-end items-center pt-15">
+              <span className="text-white font-bold tracking-tight flex gap-8 font-redHat">
+                    <Link to={"/"}>Termos de uso</Link>
+                    <Link to={"/"}>Politicas de privacidade</Link>
+              </span>
+            </div>
         </div>
-    </div>
     )
 };
 
