@@ -46,7 +46,7 @@ const UserProfileForm = ({
         <Form {...form}>
             <form 
               onSubmit={form.handleSubmit(onSave)} 
-              className="space-y-4 md:p-10 font-redHat text-PrimaryGrey"
+              className="space-y-4 md:p-10 font-redHat text-PrimaryGrey rounded-xl"
             >
                 <div>
                     <h2 className="text-3xl font-bold">{title}</h2>

@@ -33,7 +33,7 @@ const ImageSection = () => {
                     <FormItem>
                       <FormControl>
                         <Input 
-                          className="bg-white rounded-xl border-SecondaryGrey" 
+                          className="bg-white rounded-xl border-SecondaryGrey hover:bg-SecondaryGrey cursor-pointer" 
                           type="file" 
                           accept=".jpg, .jpeg, .png"
                           onChange={(event) => 

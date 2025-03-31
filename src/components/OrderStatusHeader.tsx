@@ -35,7 +35,7 @@ const OrderStatusHeader = ({ order }: Props) => {
         <span> Expectiva de entrega: {getExpectedDelivery()}</span>
       </h1>
       <Progress
-        className="animate-pulse"
+        className="bg-dailyTertiary transition-all animate-pulse"
         value={getOrderStatusInfo().progressValue}
       />
     </>

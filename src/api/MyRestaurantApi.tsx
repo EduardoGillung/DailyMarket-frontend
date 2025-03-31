@@ -168,7 +168,7 @@ export const useUpdateMyRestaurantOrder = () => {
     );
 
     if (!response.ok) {
-      throw new Error("Failed to update status");
+      throw new Error("Erro ao atualizar status do pedido");
     }
 
     return response.json();
@@ -183,11 +183,11 @@ export const useUpdateMyRestaurantOrder = () => {
   } = useMutation(updateMyRestaurantOrder);
 
   if (isSuccess) {
-    toast.success("Order updated");
+    toast.success("Pedido atualizado");
   }
 
   if (isError) {
-    toast.error("Unable to update order");
+    toast.error("Não foi possivel atualizar o pedido");
     reset();
   }
 

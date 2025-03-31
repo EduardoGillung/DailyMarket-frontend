@@ -1,6 +1,7 @@
 export const cuisineList = [
     "Entrega gratis",
-    "Retirar pedido no local",
     "Vale refeição",
-    "Cartão de crédito",  
+    "Vale Alimentação",
+    "Cartão de crédito/debito",
+    "Pix"  
   ];
