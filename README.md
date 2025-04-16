@@ -1,6 +1,6 @@
 # Pizzari 🍕
 
-**Pizzari** é uma aplicação web full stack voltada para o gerenciamento completo de pizzarias, desde o cadastro de restaurantes, gerenciamento de cardápio, realização de pedidos até o pagamento online via Stripe. O sistema foi desenvolvido com foco em escalabilidade, segurança e usabilidade, utilizando tecnologias modernas do ecossistema JavaScript/TypeScript.
+**Pizzari** é uma aplicação web full stack voltada para o gerenciamento completo de pizzarias, desde o cadastro de restaurantes, gerenciamento de cardápio, realização de pedidos até o pagamento online via Stripe. O sistema foi desenvolvido com foco em escalabilidade, segurança e usabilidade, utilizando tecnologias JavaScript/TypeScript.
 
 ---
 
