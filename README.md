@@ -53,6 +53,6 @@ A arquitetura da aplicação foi dividida em dois projetos independentes:
 ### Infraestrutura e Deploy
 - **Render.com** - hospedagem de frontend e backend
 - **MongoDB Atlas** - banco de dados em nuvem
-
-Acesse: https://pizzari.onrender.com/
 - **Stripe** - gateway de pagamento
+
+  Acesse: https://pizzari.onrender.com/
